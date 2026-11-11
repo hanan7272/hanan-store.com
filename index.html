@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HANAN STORE | 11.11 Sale</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #faf8f5;
+    color: #222;
+}
+
+header {
+    background: #171717;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #d6b77a;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #d6b77a;
+}
+
+/* 11.11 SALE BANNER */
+.sale-banner {
+    background: #a00000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.sale-banner span {
+    color: #ffd978;
+}
+
+/* HERO */
+.hero {
+    min-height: 500px;
+    background: linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    ), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600')
+    center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #d6b77a;
+    color: #171717;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: white;
+}
+
+/* PRODUCTS */
+.section {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 35px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,.08);
+    padding-bottom: 20px;
+    transition: .3s;
+    position: relative;
+}
+
+.product:hover {
+    transform: translateY(-6px);
+}
+
+.product img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.discount {
+    background: #c90000;
+    color: white;
+    padding: 9px 14px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.product h3 {
+    margin: 15px 0 8px;
+    font-size: 20px;
+}
+
+.old-price {
+    color: #888;
+    text-decoration: line-through;
+    margin: 8px 0;
+}
+
+.price {
+    color: #a00000;
+    font-weight: bold;
+    font-size: 21px;
+    margin: 8px 0;
+}
+
+.sale-text {
+    color: #16833c;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product button {
+    background: #171717;
+    color: white;
+    border: none;
+    padding: 11px 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.product button:hover {
+    background: #a27c3e;
+}
+
+/* ABOUT */
+.about {
+    background: #eee8df;
+    padding: 65px 10%;
+    text-align: center;
+}
+
+.about p {
+    max-width: 750px;
+    margin: 20px auto;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* CONTACT */
+.contact {
+    background: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact p {
+    margin: 15px;
+}
+
+/* FOOTER */
+footer {
+    background: #171717;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+footer span {
+    color: #d6b77a;
+}
+
+@media(max-width:600px) {
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .sale-banner {
+        font-size: 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">HANAN STORE</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- 11.11 SALE -->
+<div class="sale-banner">
+    🔥 11.11 MEGA SALE 🔥
+    <br>
+    <span>GET FLAT 15% OFF ON ALL PRODUCTS!</span>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div>
+        <h1>HANAN STORE</h1>
+        <p>Discover Your Style. Wear Your Confidence.</p>
+        <p style="color:#ffd978;font-weight:bold;">
+            11.11 SALE - FLAT 15% OFF
+        </p>
+        <a href="#collection" class="btn">SHOP NOW</a>
+    </div>
+</section>
+
+<!-- COLLECTION -->
+<section class="section" id="collection">
+
+    <h2>Our Collection</h2>
+
+    <p class="subtitle">
+        Explore our latest fashion collection.
+        Special 11.11 Sale - Limited Time!
+    </p>
+
+    <div class="products">
+
+        <!-- PRODUCT 1 -->
+        <div class="product">
+            <div class="discount">15% OFF</div>
+
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+            alt="Premium T-Shirts">
+
+            <h3>Premium T-Shirts</h3>
+
+            <p class="old-price">Rs. 9,999</p>
+            <p class="price">Rs. 8,499.15</p>
+            <p class="sale-text">11.11 SALE PRICE</p>
+
+            <button onclick="order('Premium T-Shirts')">
+                Order Now
+            </button>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="product">
+            <div class="discount">15% OFF</div>
+
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600"
+            alt="Fashion Wear">
+
+            <h3>Fashion Wear</h3>
+
+            <p class="old-price">Rs. 9,999</p>
+            <p class="price">Rs. 8,499.15</p>
+            <p class="sale-text">11.11 SALE PRICE</p>
+
+            <button onclick="order('Fashion Wear')">
+                Order Now
+            </button>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="product">
+            <div class="discount">15% OFF</div>
+
+            <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600"
+            alt="Casual Shirts">
+
+            <h3>Casual Shirts</h3>
+
+            <p class="old-price">Rs. 9,999</p>
+            <p class="price">Rs. 8,499.15</p>
+            <p class="sale-text">11.11 SALE PRICE</p>
+
+            <button onclick="order('Casual Shirts')">
+                Order Now
+            </button>
+        </div>
+
+        <!-- PRODUCT 4 -->
+        <div class="product">
+            <div class="discount">15% OFF</div>
+
+            <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600"
+            alt="Jeans and Pants">
+
+            <h3>Jeans & Pants</h3>
+
+            <p class="old-price">Rs. 9,999</p>
+            <p class="price">Rs. 8,499.15</p>
+            <p class="sale-text">11.11 SALE PRICE</p>
+
+            <button onclick="order('Jeans & Pants')">
+                Order Now
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <h2>About HANAN STORE</h2>
+
+    <p>
+        Welcome to HANAN STORE! We bring you stylish,
+        comfortable and quality garments for your
+        everyday fashion needs.
+
+        Our goal is to make you look confident and feel special.
+        Explore our collection and discover your perfect style.
+
+        Enjoy our special 11.11 Mega Sale and get 15% OFF
+        on all products!
+    </p>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>Have questions or want to place an order?</p>
+
+    <p>📍 Location: Pakistan</p>
+
+    <p>📞 Phone: 03077185772</p>
+
+    <a href="https://wa.me/923077185772"
+       class="btn"
+       target="_blank">
+        Contact on WhatsApp
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <p>© 2026 <span>HANAN STORE</span>. All Rights Reserved.</p>
+
+    <p>Fashion | Quality | Style</p>
+
+    <p>🔥 11.11 SALE - FLAT 15% OFF 🔥</p>
+
+</footer>
+
+<!-- WHATSAPP ORDER SCRIPT -->
+<script>
+
+function order(product) {
+
+    const phone = "923077185772";
+
+    const originalPrice = 9999;
+    const discount = 15;
+
+    const finalPrice = (
+        originalPrice -
+        (originalPrice * discount / 100)
+    ).toFixed(2);
+
+    const message =
+        "Hello HANAN STORE!%0A" +
+        "I want to order: " + product + "%0A" +
+        "Original Price: Rs. " + originalPrice + "%0A" +
+        "Discount: 15% OFF%0A" +
+        "Sale Price: Rs. " + finalPrice + "%0A" +
+        "Please confirm my order.";
+
+    window.open(
+        "https://wa.me/" + phone + "?text=" + message,
+        "_blank"
+    );
+}
+
+</script>
+
+</body>
+</html>
